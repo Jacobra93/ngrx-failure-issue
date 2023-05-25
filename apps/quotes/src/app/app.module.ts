@@ -15,7 +15,8 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule, HttpClientModule,
     RouterModule.forRoot([
       { path: '', pathMatch: 'full', redirectTo: 'cats' },
-      { path: 'cats', loadChildren: () => import('@ngrx-failure-issue/cats-ui').then(m => m.CatsUiModule) }
+      { path: 'cats', loadChildren: () => import('@ngrx-failure-issue/cats-ui').then(m => m.CatsUiModule) },
+      { path: 'dogs', loadChildren: () => import('@ngrx-failure-issue/dogs-ui').then(m => m.DogsUiModule) }
     ]),
     RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
     StoreModule.forRoot(

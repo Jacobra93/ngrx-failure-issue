@@ -5,7 +5,12 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class CatsService {
-  private API_URL = 'https://api.thecatapi.com/v1/images/search?limit=10';
+  // the store is expecting an array
+  // this returns an object which breaks the app,
+  private API_URL = 'https://api.thecatapi.com/v1/images/0XYvRd7oD';
+
+  // this API works since it returns an array like the store is expecting
+  // private API_URL = 'https://api.thecatapi.com/v1/images/search?limit=10';
 
   constructor(private http: HttpClient) { }
 

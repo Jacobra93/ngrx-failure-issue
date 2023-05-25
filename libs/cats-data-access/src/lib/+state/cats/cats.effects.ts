@@ -1,6 +1,6 @@
 import {inject, Injectable} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
-import {catchError, concatMap, of, map, exhaustMap, EMPTY} from 'rxjs';
+import {catchError, concatMap, map, of} from 'rxjs';
 import * as CatsActions from './cats.actions';
 import {CatsService} from "./cats.service";
 

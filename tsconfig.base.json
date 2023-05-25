@@ -16,7 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@ngrx-failure-issue/cats": ["libs/cats/src/index.ts"],
-      "@ngrx-failure-issue/cats-ui": ["libs/cats-ui/src/index.ts"]
+      "@ngrx-failure-issue/cats-ui": ["libs/cats-ui/src/index.ts"],
+      "@ngrx-failure-issue/dogs-data-access": [
+        "libs/dogs-data-access/src/index.ts"
+      ],
+      "@ngrx-failure-issue/dogs-ui": ["libs/dogs-ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

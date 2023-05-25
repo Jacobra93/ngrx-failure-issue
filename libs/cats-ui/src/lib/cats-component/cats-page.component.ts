@@ -1,5 +1,5 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {CatsFacade} from "../../../../cats-data-access/src/lib/+state/cats/cats.facade";
+import {CatsFacade} from "../../../../cats-data-access/src";
 
 @Component({
   selector: 'ngrx-failure-issue-cats-component',
@@ -8,9 +8,9 @@ import {CatsFacade} from "../../../../cats-data-access/src/lib/+state/cats/cats.
 })
 export class CatsPageComponent implements OnInit {
   catsFacade = inject(CatsFacade);
+  cats$ = this.catsFacade.cats$.pipe()
 
   ngOnInit() {
     this.catsFacade.init();
-    this.catsFacade.cats$.pipe().subscribe(cats => console.log('cats', cats))
   }
 }

@@ -33,7 +33,6 @@ const reducer = createReducer(
   })),
   on(CatsActions.loadCatsSuccess, (state, { cats }) =>
     {
-      console.log('CATS', cats)
       return catsAdapter.setAll(cats, { ...state, loaded: true })
     }
   ),

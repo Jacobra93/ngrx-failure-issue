@@ -1,0 +1,4 @@
+<h1>Dogs</h1>
+<ng-container *ngIf="dogs$ | async as dogs">
+  <img [src]="dog.url" *ngFor="let dog of dogs" width="300" height="300">
+</ng-container>

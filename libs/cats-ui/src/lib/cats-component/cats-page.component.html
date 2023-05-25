@@ -1,1 +1,4 @@
-<p>cats-component works!</p>
+<h1>Cats</h1>
+<ng-container *ngIf="cats$ | async as cats">
+  <img [src]="cat.url" *ngFor="let cat of cats" width="300" height="300">
+</ng-container>
