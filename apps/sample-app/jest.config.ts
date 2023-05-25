@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'quotes',
+  displayName: 'sample-app',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/quotes',
+  coverageDirectory: '../../coverage/apps/sample-app',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
